@@ -1,0 +1,20 @@
+import { Component } from "react";
+
+let helperArray= require('./userList.json');
+export default class App extends Component{
+  constructor(props) {
+    super(props);
+    this.state = {
+      allUsers: helperArray,
+    };
+  }
+  render() {
+    return (
+      {this.state.allUsers.map((item, index) => (
+        <ListItem>
+          <Left></Left>
+        </ListItem>
+      ))}
+    )
+  }
+}
